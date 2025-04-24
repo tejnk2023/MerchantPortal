@@ -7,7 +7,7 @@ import org.testng.annotations.Test;
 
 import base.BaseTest;
 
-public class TC001_LoginTest extends BaseTest{
+public class TC001_LoginTest extends BaseTest {
 	
 	@Test
 	public void verify_login() {

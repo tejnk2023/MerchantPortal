@@ -10,6 +10,13 @@
           <include name="navigation_test"/>
         </methods>
       </class> <!-- testCases.TC002_NavigationTest -->
+      <class name="testCases.TC003_SearchFieldTest">
+        <methods>
+          <include name="setup"/>
+          <include name="tearDown"/>
+          <include name="searchfield_test"/>
+        </methods>
+      </class> <!-- testCases.TC003_SearchFieldTest -->
       <class name="testCases.TC001_LoginTest">
         <methods>
           <include name="setup"/>

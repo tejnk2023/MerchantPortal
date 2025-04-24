@@ -30,17 +30,17 @@ public class TC003_SearchFieldTest extends BaseTest  {
 			
 			//generate random number between 0 and list size
 			Random rand=new Random();
-			int randomNum=rand.nextInt(lst.size())+1;
+			int randomNum=rand.nextInt(lst.size()); //int randomNum=rand.nextInt(lst.size())+1 -->previously
 			
 			//get name from random row
-			String name=wait.until(ExpectedConditions.elementToBeClickable(lst.get(randomNum))).getText();
+			String name=wait.until(ExpectedConditions.elementToBeClickable(lst.get(randomNum))).getText().trim();
 			
 			//copy paste above name into search field
 			wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//input[@type='text']"))).sendKeys(name);
 			//Thread.sleep(2000);
 			
 			//get search result
-			String result=wait.until(ExpectedConditions.elementToBeClickable(By.xpath("(//div[@role='presentation'])[18]"))).getText();
+			String result=wait.until(ExpectedConditions.elementToBeClickable(By.xpath("(//div[@role='presentation'])[18]"))).getText().trim();
 			
 			//compare search result with search field input
 			Assert.assertEquals(result, name);
